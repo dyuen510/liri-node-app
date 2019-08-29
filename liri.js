@@ -43,14 +43,14 @@ function displayBands(input) {
             var bands = JSON.parse(b);
             for (var i = 0; i < 5; i++) {
                 console.log('*****************************************************')
-                console.log('Name of band: ' + bands[i].lineup);
+                console.log('Name of band: ' + input);
                 console.log('Name of the venue: ' + bands[i].venue.name);
                 console.log('Venue location: ' + bands[i].venue.city);
                 console.log('Date of the Event:') + bands[i].datetime;
                 console.log('*****************************************************')
             }
         } else {
-            console.log('Error.')
+            console.log(err)
         }
     })
 }
@@ -70,7 +70,7 @@ function displaySong(input) {
                 return;
             }
             var songs = data.tracks.items;
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 1; i++) {
                 console.log('*****************************************************')
                 console.log('Artist(s): ' + songs[i].artists[0].name);
                 console.log('Song name: ' + songs[i].name);
@@ -113,6 +113,16 @@ function displayMovie(input) {
             console.log('Error');
         }
     });
+}
+
+function displaySomething(input){
+    fs.readFile('random.txt','utf8',function(err,data){
+        if(err){
+            return console.log(err);
+        }
+        var array = data.split(',');
+        userInput(array[0],array[1]);
+    })
 }
 
 
