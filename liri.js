@@ -46,7 +46,7 @@ function displayBands(input) {
                 console.log('Name of band: ' + input);
                 console.log('Name of the venue: ' + bands[i].venue.name);
                 console.log('Venue location: ' + bands[i].venue.city);
-                console.log('Date of the Event:') + bands[i].datetime;
+                console.log('Date of the Event:' + bands[i].datetime);
                 console.log('*****************************************************')
             }
         } else {
@@ -90,7 +90,7 @@ function displayMovie(input) {
         // * It's on Netflix!
         input = "Mr. Nobody";
         console.log('*****************************************************')
-        console.log('If you haven\'t watched "Mr. Nobdy," then you should:http://www.imdb.com/title/tt0485947/.');
+        console.log('If you haven\'t watched "Mr. Nobody," then you should:http://www.imdb.com/title/tt0485947/.');
         console.log('It\'s on Netflix!');
         console.log('*****************************************************')
     }
