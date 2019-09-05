@@ -83,6 +83,7 @@ function displaySong(input) {
 }
 
 // movie-this
+
 function displayMovie(input) {
     if (input === undefined) {
         // * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
@@ -95,10 +96,14 @@ function displayMovie(input) {
         console.log('*****************************************************')
     }
 
-    var queryURL = 'http://www.omdbapi.com/?t=' + input + '&y=&plot=short&tomatoes=True&r=json&apikey=trilogy';
-    request(queryURL, function (err, response, b) {
-        if (!err) {
-            var movies = JSON.parse(b);
+    var axios = require("axios");
+
+
+    // Then run a request with axios to the OMDB API with the movie specified
+    axios.get("http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy").then(
+        function (response) {
+            var movies = response.data
+            // console.log("The movie's rating is: " + response.data.imdbRating);
             console.log('*****************************************************')
             console.log('Title: ' + movies.Title);
             console.log('Release Year: ' + movies.Year);
@@ -109,19 +114,19 @@ function displayMovie(input) {
             console.log('Movie Plot: ' + movies.Plot);
             console.log('Actor(s): ' + movies.Actors);
             console.log('*****************************************************')
-        } else {
-            console.log('Error');
-        }
-    });
-}
 
-function displaySomething(input){
-    fs.readFile('random.txt','utf8',function(err,data){
-        if(err){
+        }
+    )};
+
+
+
+function displaySomething(input) {
+    fs.readFile('random.txt', 'utf8', function (err, data) {
+        if (err) {
             return console.log(err);
         }
         var array = data.split(',');
-        userInput(array[0],array[1]);
+        userInput(array[0], array[1]);
     })
 }
 
