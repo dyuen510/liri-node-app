@@ -3,6 +3,8 @@
 Just like Siri which takes in voice commands and returns information. The liri node app takes in a few commands 
 concert-this, spotify-this-song, movie-this, and do-what-it-says.
 
+To initiate the app, user must go to terminal and head to the file directory. Start by inputting in the terminal node liri.js command and then user input in order for liri to give a response back. 
+
 Concert-this command works with bandsintown api to return band or artist information such as lineup name, and venue information.
 <div align="center">
     <img src="images/concert-this.png" width="400px"</img> 
