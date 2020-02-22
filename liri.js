@@ -1,18 +1,18 @@
 require('dotenv').config();
 
 // vars
-var fs = require('fs');
-var request = require('request');
-var keys = require('./keys.js');
-var spot = require('node-spotify-api');
-var spotify = new spot(keys.spotify);
+const fs = require('fs');
+const request = require('request');
+const keys = require('./keys.js');
+const spot = require('node-spotify-api');
+const spotify = new spot(keys.spotify);
 // argv
-var userChoice = process.argv[2];
-var input = process.argv[3];
+const userChoice = process.argv[2];
+const input = process.argv[3];
 
-userInput(userChoice, input);
+// userInput(userChoice, input);
 
-function userInput(userChoice, input) {
+const userInput = (userChoice, input) => {
     switch (userChoice) {
         // * `concert-this`
         case 'concert-this':
@@ -34,6 +34,8 @@ function userInput(userChoice, input) {
             console.log('Not a valid option. Liri Choices are concert-this, spotify-this-song, movie-this or do-what-it-says')
     }
 }
+
+userInput(userChoice, input);
 
 //concert-this
 function displayBands(input) {
@@ -95,9 +97,8 @@ function displayMovie(input) {
         console.log('It\'s on Netflix!');
         console.log('*****************************************************')
     }
-
+    
     var axios = require("axios");
-
 
     // Then run a request with axios to the OMDB API with the movie specified
     axios.get("http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy").then(
