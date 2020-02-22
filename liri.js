@@ -10,31 +10,6 @@ const spotify = new spot(keys.spotify);
 const userChoice = process.argv[2];
 const input = process.argv[3];
 
-// const userInput = (userChoice, input) => {
-//     switch (userChoice) {
-//         // * `concert-this`
-//         case 'concert-this':
-//             displayBands(input);
-//             break;
-//         // * `spotify-this-song`
-//         case 'spotify-this-song':
-//             displaySong(input);
-//             break;
-//         // * `movie-this`
-//         case 'movie-this':
-//             displayMovie(input);
-//             break;
-//         // * `do-what-it-says`
-//         case 'do-what-it-says':
-//             displaySomething(input);
-//             break;
-//         default:
-//             console.log('Not a valid option. Liri Choices are concert-this, spotify-this-song, movie-this or do-what-it-says')
-//     }
-// }
-
-// userInput(userChoice, input);
-
 //concert-this
  const displayBands = (input) => {
     let queryURL = 'https://rest.bandsintown.com/artists/' + input + '/events?app_id=codingbootcamp';
