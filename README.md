@@ -7,19 +7,19 @@ To initiate the app, user must go to terminal and head to the file directory. St
 
 Concert-this command works with bandsintown api to return band or artist information such as lineup name, and venue information.
 <div align="center">
-    <img src="images/concert-this.png" width="400px"</img> 
+    <img src="images/concert-this.png" width="500px" height = "200px"</img> 
 </div>
 
 Spotify-this-song command returns information for a song and the spotify api is used. The song title is needed after the command and liri would return several
 songs based on the title.
 
 <div align="center">
-    <img src="images/spotify-this-song.png" width="400px"</img> 
+    <img src="images/spotify-this-song.png" width="500px" height = "200px"</img> 
 </div>
 
 Movie-this returns information on a movie and the omdbapi is used. Information like Rottentomatoes ratings, actors, language, plot and release year are returned to the user. 
 <div align="center">
-    <img src="images/movie-this.png" width="400px"</img> 
+    <img src="images/movie-this.png" width="500px" height = "200px"</img> 
 </div>
 
 
@@ -31,5 +31,5 @@ Hiking trail information is taken from hikingproject.com with latitude and longi
 
 Do-what-it-says just returns information that is stored in another file. User doens't have to put any other input other than the command do-what-it-says. 
 <div align="center">
-    <img src="images/do-what-it-says.png" width="400px"</img> 
+    <img src="images/do-what-it-says.png" width="500px" height = "200px"</img> 
 </div>
