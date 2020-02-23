@@ -92,6 +92,24 @@ const displayMovie = (input) => {
         }
     )};
 
+    //show-me-a-hike
+const displayHike = (input) => {
+    let axios = require('axios');
+    axios.get('https://www.hikingproject.com/data/get-trails?lat=37.5124&lon=-121.8805&key=200684290-b9eee42ec1bad2091e0fbde0ed1ad635').then(
+        function (response) {
+            let hikes = response.data
+        for( let i = 0; i < 1; i++){
+        console.log('*****************************************************')
+        console.log('Name of Hike: ' + hikes.trails[i].name);
+        console.log('Summary: ' + hikes.trails[i].summary);
+        console.log('Location: ' + hikes.trails[i].location);
+        console.log('Longitude: ' + hikes.trails[i].longitude);
+        console.log('Latitude: ' + hikes.trails[i].latitude);
+        console.log('*****************************************************')
+        }
+        }
+    )
+}
 
 
 const displaySomething = (input) => {
@@ -117,6 +135,10 @@ const userInput = (userChoice, input) => {
         // * `movie-this`
         case 'movie-this':
             displayMovie(input);
+            break;
+        // * `show-me-a-hike`
+        case 'show-me-a-hike':
+            displayHike(input);
             break;
         // * `do-what-it-says`
         case 'do-what-it-says':
