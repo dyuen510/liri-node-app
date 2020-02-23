@@ -33,3 +33,6 @@ Do-what-it-says just returns information that is stored in another file. User do
 <div align="center">
     <img src="images/do-what-it-says.png" width="500px" height = "200px"</img> 
 </div>
+
+Completed with Node.js, process.argv, axios to execute server-side HTTP requests to third-party APIs, fs package and inquirer.
+
