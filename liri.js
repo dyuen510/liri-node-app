@@ -30,7 +30,7 @@ const input = process.argv[3];
     })
 }
 //spotify-this-song
-function displaySong(input) {
+const displaySong = (input) => {
     if (input == undefined) {
         input = 'The Sign'; //when no song is provided. The Sign would be the default.
     }
@@ -44,8 +44,8 @@ function displaySong(input) {
                 console.log('Error: ' + err);
                 return;
             }
-            var songs = data.tracks.items;
-            for (var i = 0; i < 1; i++) {
+            let songs = data.tracks.items;
+            for (let i = 0; i < 1; i++) {
                 console.log('*****************************************************')
                 console.log('Artist(s): ' + songs[i].artists[0].name);
                 console.log('Song name: ' + songs[i].name);
@@ -59,7 +59,7 @@ function displaySong(input) {
 
 // movie-this
 
-function displayMovie(input) {
+const displayMovie = (input) => {
     if (input === undefined) {
         // * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
         // * If you haven't watched "Mr. Nobody," then you should: <http://www.imdb.com/title/tt0485947/>
@@ -71,12 +71,12 @@ function displayMovie(input) {
         console.log('*****************************************************')
     }
     
-    var axios = require("axios");
+    let axios = require("axios");
 
     // Then run a request with axios to the OMDB API with the movie specified
     axios.get("http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy").then(
         function (response) {
-            var movies = response.data
+            let movies = response.data
             // console.log("The movie's rating is: " + response.data.imdbRating);
             console.log('*****************************************************')
             console.log('Title: ' + movies.Title);
