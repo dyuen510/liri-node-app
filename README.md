@@ -26,3 +26,7 @@ Do-what-it-says just returns information that is stored in another file. User do
 <div align="center">
     <img src="images/do-what-it-says.png" width="400px"</img> 
 </div>
+
+<div align="center">
+    <img src="images/show-me-a-hike.png" width="400px"</img> 
+</div>
