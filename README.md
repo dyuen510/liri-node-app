@@ -26,7 +26,7 @@ Movie-this returns information on a movie and the omdbapi is used. Information l
 show-me-a-hike returns a description about a hike. User doesn't have to put any inputs other than the command.
 Hiking trail information is taken from hikingproject.com with latitude and longitude of the trail in order to query for the information. 
 <div align="center">
-    <img src="images/show-me-a-hike.png" width="600px" height = "400px"</img> 
+    <img src="images/show-me-a-hike.png" width="400px" height = "200px"</img> 
 </div>
 
 Do-what-it-says just returns information that is stored in another file. User doens't have to put any other input other than the command do-what-it-says. 
