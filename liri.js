@@ -94,12 +94,12 @@ const displayMovie = (input) => {
 
 
 
-function displaySomething(input) {
+const displaySomething = (input) => {
     fs.readFile('random.txt', 'utf8', function (err, data) {
         if (err) {
             return console.log(err);
         }
-        var array = data.split(',');
+        let array = data.split(',');
         userInput(array[0], array[1]);
     })
 }
